@@ -7,46 +7,37 @@ const Home = () => {
     const [result, setResult] = useState('')
     const [number1, setNumber1] = useState('')
     const [number2, setNumber2] = useState('')
-
-
+    
     const Add = () => {
-        if (isNaN(number1+number2)){
-            alert("Please enter a valid input")
-        }
-        else{
+       (isNaN(number1+number2)) ? (alert("Please enter a valid input"))
+        : (() => {
             let sum = parseFloat(number1) + parseFloat(number2)
             setResult(sum)
-        }
+        })();
     }
     
     const Sub = () => {
-        if (isNaN(number1-number2)){
-            alert("Please enter a valid input")
-        }
-        else{
+        (isNaN(number1+number2)) ? (alert("Please enter a valid input"))
+        : (() => {
             let difference = parseFloat(number1) - parseFloat(number2)
             setResult(difference)
-        }
+        })();
     }
 
     const Div = () => {
-        if (isNaN(number1/number2)){
-            alert("Please enter a valid input")
-        }
-        else{
+        (isNaN(number1+number2)) ? (alert("Please enter a valid input"))
+        : (() => {
             let qoutient = parseFloat(number1) / parseFloat(number2)
             setResult(qoutient)
-        }
+        })();
     }
 
     const Mult = () => {
-        if (isNaN(number1*number2)){
-            alert("Please enter a valid input")
-        }
-        else{
+        (isNaN(number1+number2)) ? (alert("Please enter a valid input"))
+        : (() => {
             let product = parseFloat(number1) * parseFloat(number2)
             setResult(product)
-        }
+        })();
     }
     
 
